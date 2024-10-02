@@ -1,0 +1,38 @@
+
+environment,
+        write_restart = 'e3sm.rst'
+        tabular_data
+          tabular_data_file = 'e3sm.dat' 
+
+method,
+	list_parameter_study
+	import_points_file = 'NEWCASE_parameter_vals_freeform_no_POM.txt'
+	freeform
+
+
+# NOTE - POM hygroscopicity parameter is also sampled & swapped in the PPE  (via namelist param 'mode_defs'), but this is done OUTSIDE of Dakota
+variables,
+	uniform_uncertain = num_uncertain
+        descriptors   'param1'  'param2'  'param3'
+        lower_bounds  lb_1      lb_2      lb_3
+        upper_bounds  ub_1      ub_2      ub_3
+
+interface,
+        asynchronous 
+           evaluation_concurrency = 1
+	analysis_driver = './run.py'
+           fork
+	      parameters_file = 'params.in'
+              results_file    = 'results.out'
+	      file_save
+	      file_tag
+	      work_directory named 'WORKING_PATH/workdir'
+	      	 copy_files      = './create.csh' 'NEWCASE_inp.yml.template' 'config_csh.txt'
+	         directory_tag
+	         directory_save
+
+
+responses,
+	response_functions = 1
+	no_gradients 
+	no_hessians
