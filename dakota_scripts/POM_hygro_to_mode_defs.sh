@@ -20,6 +20,7 @@ RESAMPLE=$RESAMPLE
 # append some of the variable anmes if resample=true
 if [ "$RESAMPLE" = true ]; then
     PARAMS_CSV=$PPE_SCRIPT_DIR/$NEWCASE"_parameter_vals_annotated_RESAMPLE.csv"
+    OLD_PATH=$NEW_PATH
     NEW_PATH=$NEW_PATH"RESAMPLED/"
     N_SAMPLES=$N_SIMS # from config.txt
     echo "$N_SAMPLES new copies of the files will be generated."
@@ -78,5 +79,8 @@ echo "Done with swapping; all new files saved."
 # the POM hygroscopicity values with full `mode_defs` namelist strings
 # containing updated file paths to the new POM files) - SEPARATE from the other
 # parameter swap files - bc you will do the swapping outside of Dakota
-python $PYTHON_DIR/vals_to_mode_defs.py -i $PARAMS_CSV --resampled_path $NEW_PATH
-
+if [ "$RESAMPLE" = true ]; then
+    python $PYTHON_DIR/vals_to_mode_defs.py -i $PARAMS_CSV --POM_rel_path $OLD_PATH --resampled_path $NEW_PATH 
+else
+    python $PYTHON_DIR/vals_to_mode_defs.py -i $PARAMS_CSV --POM_rel_path $NEW_PATH
+fi
