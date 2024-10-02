@@ -1,0 +1,50 @@
+# -----------------------------------------------
+# ----- change the following for your machine ---
+# -----------------------------------------------
+
+# path to the repository where the PPE/Dakota files are stored
+set CODE_PATH=/glade/u/home/jnug/work/codes/PROCEED-PPE
+
+# path to where E3SMv3 is installed
+set E3SM_CODE_ROOT=/glade/u/home/jnug/work/E3SM/
+
+# path to where E3SMv3 output is saved after running
+set E3SM_OUTPUT_DIR=/glade/derecho/scratch/jnug/E3SM
+
+# input data directory for E3SM
+set E3SM_INPUT_DIR=/glade/campaign/uwyo/wyom0191/cime/inputdata
+
+# name of the parent case
+set PARENT_CASENAME=v3.F2010.nudged.PD
+
+# relative path to the specific run in the parent case that will be cloned 
+# ("" for a production run, or, e.g., tests/custom-4_1x2_ndays for a test run)
+set PARENT_RUN=""
+
+# path to where you will save the workdirs containing the cloned/sampled files (ready to submit)
+set WORKING_PATH=$CODE_PATH/example_case/
+
+
+# ----------------------------------------------------------------------------------------------
+# ---- you can keep these defaults or change them, depending on the PPE you want to develop ----
+# ----------------------------------------------------------------------------------------------
+
+# pick a new case name for the PPE
+set NEWCASE=example_case
+
+# number of parameters that will be varied
+set N_PARAMS=3
+
+# number of simulations to run (i.e., # of samples for each param)
+set N_SIMS=30
+
+# name of the subdirectory where new POM files with swapped
+# hygroscopicity values will be stored
+set NEW_POM_RELPATH=POM_ppe_example/
+
+# seed to reproduce the randomization in the LHS sampling
+set SEED=13
+
+# change to true if you want to resample the PPE/produce additional samples;
+# default should be false for a "normal" (first/new) PPE run
+set RESAMPLE=false

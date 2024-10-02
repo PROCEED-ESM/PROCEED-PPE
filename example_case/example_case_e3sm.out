@@ -1,0 +1,517 @@
+Dakota version 6.19+ (stable) released Mar 16 2024.
+Repository revision ccdbfcdef (2024-03-15) built Mar 16 2024 18:10:30.
+Running MPI Dakota executable in serial mode.
+Start time: Wed Oct  2 16:28:31 2024
+
+-----------------------
+Begin DAKOTA input file
+example_case_e3sm.in
+-----------------------
+
+environment,
+        write_restart = 'e3sm.rst'
+        tabular_data
+          tabular_data_file = 'e3sm.dat' 
+
+method,
+	list_parameter_study
+	import_points_file = 'example_case_parameter_vals_freeform_no_POM.txt'
+	freeform
+
+
+# NOTE - POM hygroscopicity parameter is also sampled & swapped in the PPE  (via namelist param 'mode_defs'), but this is done OUTSIDE of Dakota
+variables,
+	uniform_uncertain = 2
+        descriptors   'seasalt_emis_scale'  'ice_sed_ai'
+        lower_bounds  0.5                   350.0
+        upper_bounds  2.5                   1400.0
+
+interface,
+        asynchronous 
+           evaluation_concurrency = 1
+	analysis_driver = './run.py'
+           fork
+	      parameters_file = 'params.in'
+              results_file    = 'results.out'
+	      file_save
+	      file_tag
+	      work_directory named '/glade/u/home/jnug/work/codes/PROCEED-PPE/example_case//workdir'
+	      	 copy_files      = './create.csh' 'example_case_inp.yml.template' 'config_csh.txt'
+	         directory_tag
+	         directory_save
+
+
+responses,
+	response_functions = 1
+	no_gradients 
+	no_hessians
+---------------------
+End DAKOTA input file
+---------------------
+
+Using Dakota input file 'example_case_e3sm.in'
+Writing new restart file 'e3sm.rst'.
+
+>>>>> Executing environment.
+
+>>>>> Running list_parameter_study iterator.
+
+List parameter study for 30 samples
+
+
+---------------------
+Begin Evaluation    1
+---------------------
+Parameters for evaluation 1:
+                      2.2423468275e+00 seasalt_emis_scale
+                      1.1250644120e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.1 results.out.1
+
+Active response data for evaluation 1:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation    2
+---------------------
+Parameters for evaluation 2:
+                      2.4825702426e+00 seasalt_emis_scale
+                      6.9729801898e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.2 results.out.2
+
+Active response data for evaluation 2:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation    3
+---------------------
+Parameters for evaluation 3:
+                      1.6590805539e+00 seasalt_emis_scale
+                      5.2490792362e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.3 results.out.3
+
+Active response data for evaluation 3:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation    4
+---------------------
+Parameters for evaluation 4:
+                      1.4343464350e+00 seasalt_emis_scale
+                      8.6497961885e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.4 results.out.4
+
+Active response data for evaluation 4:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation    5
+---------------------
+Parameters for evaluation 5:
+                      1.2278394704e+00 seasalt_emis_scale
+                      7.1966019834e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.5 results.out.5
+
+Active response data for evaluation 5:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation    6
+---------------------
+Parameters for evaluation 6:
+                      8.7275111115e-01 seasalt_emis_scale
+                      9.6187876025e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.6 results.out.6
+
+Active response data for evaluation 6:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation    7
+---------------------
+Parameters for evaluation 7:
+                      9.1239956538e-01 seasalt_emis_scale
+                      5.4257464071e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.7 results.out.7
+
+Active response data for evaluation 7:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation    8
+---------------------
+Parameters for evaluation 8:
+                      2.1815542563e+00 seasalt_emis_scale
+                      1.2607270099e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.8 results.out.8
+
+Active response data for evaluation 8:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation    9
+---------------------
+Parameters for evaluation 9:
+                      1.3175233185e+00 seasalt_emis_scale
+                      3.5025337589e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.9 results.out.9
+
+Active response data for evaluation 9:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   10
+---------------------
+Parameters for evaluation 10:
+                      5.9340148984e-01 seasalt_emis_scale
+                      1.1911446653e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.10 results.out.10
+
+Active response data for evaluation 10:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   11
+---------------------
+Parameters for evaluation 11:
+                      1.0184599003e+00 seasalt_emis_scale
+                      1.3107420064e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.11 results.out.11
+
+Active response data for evaluation 11:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   12
+---------------------
+Parameters for evaluation 12:
+                      1.3964831723e+00 seasalt_emis_scale
+                      9.2583043715e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.12 results.out.12
+
+Active response data for evaluation 12:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   13
+---------------------
+Parameters for evaluation 13:
+                      1.0507180192e+00 seasalt_emis_scale
+                      1.3537754472e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.13 results.out.13
+
+Active response data for evaluation 13:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   14
+---------------------
+Parameters for evaluation 14:
+                      1.1027687787e+00 seasalt_emis_scale
+                      4.3191150377e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.14 results.out.14
+
+Active response data for evaluation 14:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   15
+---------------------
+Parameters for evaluation 15:
+                      1.5844899022e+00 seasalt_emis_scale
+                      1.0332738489e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.15 results.out.15
+
+Active response data for evaluation 15:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   16
+---------------------
+Parameters for evaluation 16:
+                      1.8596946741e+00 seasalt_emis_scale
+                      8.1385722514e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.16 results.out.16
+
+Active response data for evaluation 16:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   17
+---------------------
+Parameters for evaluation 17:
+                      1.5298955066e+00 seasalt_emis_scale
+                      7.7250279681e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.17 results.out.17
+
+Active response data for evaluation 17:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   18
+---------------------
+Parameters for evaluation 18:
+                      1.9750086892e+00 seasalt_emis_scale
+                      5.8199247277e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.18 results.out.18
+
+Active response data for evaluation 18:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   19
+---------------------
+Parameters for evaluation 19:
+                      1.7313458678e+00 seasalt_emis_scale
+                      1.3770991426e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.19 results.out.19
+
+Active response data for evaluation 19:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   20
+---------------------
+Parameters for evaluation 20:
+                      5.2936903096e-01 seasalt_emis_scale
+                      4.0463681114e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.20 results.out.20
+
+Active response data for evaluation 20:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   21
+---------------------
+Parameters for evaluation 21:
+                      2.3387446810e+00 seasalt_emis_scale
+                      1.1760035387e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.21 results.out.21
+
+Active response data for evaluation 21:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   22
+---------------------
+Parameters for evaluation 22:
+                      1.8296990126e+00 seasalt_emis_scale
+                      8.7750088883e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.22 results.out.22
+
+Active response data for evaluation 22:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   23
+---------------------
+Parameters for evaluation 23:
+                      2.3933466500e+00 seasalt_emis_scale
+                      6.5844698334e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.23 results.out.23
+
+Active response data for evaluation 23:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   24
+---------------------
+Parameters for evaluation 24:
+                      2.0892318873e+00 seasalt_emis_scale
+                      1.1087775865e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.24 results.out.24
+
+Active response data for evaluation 24:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   25
+---------------------
+Parameters for evaluation 25:
+                      7.3831764661e-01 seasalt_emis_scale
+                      7.5386761745e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.25 results.out.25
+
+Active response data for evaluation 25:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   26
+---------------------
+Parameters for evaluation 26:
+                      1.9641841813e+00 seasalt_emis_scale
+                      1.0723731153e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.26 results.out.26
+
+Active response data for evaluation 26:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   27
+---------------------
+Parameters for evaluation 27:
+                      6.4465588500e-01 seasalt_emis_scale
+                      4.8716282950e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.27 results.out.27
+
+Active response data for evaluation 27:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   28
+---------------------
+Parameters for evaluation 28:
+                      8.0974712971e-01 seasalt_emis_scale
+                      1.2460364404e+03 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.28 results.out.28
+
+Active response data for evaluation 28:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   29
+---------------------
+Parameters for evaluation 29:
+                      1.2460510017e+00 seasalt_emis_scale
+                      9.9725572941e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.29 results.out.29
+
+Active response data for evaluation 29:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+
+---------------------
+Begin Evaluation   30
+---------------------
+Parameters for evaluation 30:
+                      2.1055345317e+00 seasalt_emis_scale
+                      6.1686999039e+02 ice_sed_ai
+
+blocking fork: /glade/work/jnug/codes/PROCEED-PPE/example_case/./run.py params.in.30 results.out.30
+
+Active response data for evaluation 30:
+Active set vector = { 1 }
+                      1.0000000000e+00 response_fn_1
+
+
+<<<<< Function evaluation summary: 30 total (30 new, 0 duplicate)
+
+<<<<< Iterator list_parameter_study completed.
+<<<<< Environment execution completed.
+DAKOTA execution time in seconds:
+  Total CPU        =   0.067738 [parent =          0, child =   0.067738]
+  Total wall clock =    134.609

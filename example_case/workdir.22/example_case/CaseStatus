@@ -1,0 +1,4 @@
+2024-10-02 16:30:20: xmlchange success <command> ./xmlchange RUNDIR=/glade/work/jnug/codes/PROCEED-PPE/example_case/workdir.22/example_case/run  </command>
+ ---------------------------------------------------
+2024-10-02 16:30:21: xmlchange success <command> ./xmlchange DOUT_S_ROOT=/glade/work/jnug/codes/PROCEED-PPE/example_case/workdir.22/example_case/archive  </command>
+ ---------------------------------------------------

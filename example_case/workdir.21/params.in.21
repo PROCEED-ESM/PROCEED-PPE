@@ -1,0 +1,11 @@
+                                          2 variables
+                      2.338744680991979e+00 seasalt_emis_scale
+                      1.176003538737335e+03 ice_sed_ai
+                                          1 functions
+                                          1 ASV_1:response_fn_1
+                                          2 derivative_variables
+                                          1 DVV_1:seasalt_emis_scale
+                                          2 DVV_2:ice_sed_ai
+                                          0 analysis_components
+                                         21 eval_id
+                                          0 metadata

@@ -1,0 +1,38 @@
+
+environment,
+        write_restart = 'e3sm.rst'
+        tabular_data
+          tabular_data_file = 'e3sm.dat' 
+
+method,
+	list_parameter_study
+	import_points_file = 'example_case_parameter_vals_freeform_no_POM.txt'
+	freeform
+
+
+# NOTE - POM hygroscopicity parameter is also sampled & swapped in the PPE  (via namelist param 'mode_defs'), but this is done OUTSIDE of Dakota
+variables,
+	uniform_uncertain = 2
+        descriptors   'seasalt_emis_scale'  'ice_sed_ai'
+        lower_bounds  0.5                   350.0
+        upper_bounds  2.5                   1400.0
+
+interface,
+        asynchronous 
+           evaluation_concurrency = 1
+	analysis_driver = './run.py'
+           fork
+	      parameters_file = 'params.in'
+              results_file    = 'results.out'
+	      file_save
+	      file_tag
+	      work_directory named '/glade/u/home/jnug/work/codes/PROCEED-PPE/example_case//workdir'
+	      	 copy_files      = './create.csh' 'example_case_inp.yml.template' 'config_csh.txt'
+	         directory_tag
+	         directory_save
+
+
+responses,
+	response_functions = 1
+	no_gradients 
+	no_hessians

@@ -1,0 +1,58 @@
+2024-10-02 16:29:17: /glade/u/home/jnug/work/E3SM//cime/scripts/create_clone --keepexe --case ./example_case --clone /glade/derecho/scratch/jnug/E3SM/v3.F2010.nudged.PD/
+ ---------------------------------------------------
+2024-10-02 16:29:17: Compset longname is 2010_EAM%CMIP6_ELM%CNPRDCTCBCTOP_MPASSI%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SIAC_SESP
+ ---------------------------------------------------
+2024-10-02 16:29:17: Compset specification file is /glade/work/jnug/E3SM/components/eam//cime_config/config_compsets.xml
+ ---------------------------------------------------
+2024-10-02 16:29:17: Pes     specification file is /glade/work/jnug/E3SM/components/eam/cime_config/config_pes.xml
+ ---------------------------------------------------
+
+    *** original clone README follows ****
+ 2024-07-11 00:02:38: /glade/work/jnug/E3SM/cime/scripts/create_newcase --case v3.F2010.nudged.PD --output-root /glade/derecho/scratch/jnug/E3SM/v3.F2010.nudged.PD --script-root /glade/derecho/scratch/jnug/E3SM/v3.F2010.nudged.PD/case_scripts --handle-preexisting-dirs u --compset F2010 --res ne30pg2_r05_IcoswISC30E3r5 --machine derecho --project WYOM0191 --walltime 08:00:00 --pecount custom-8
+ ---------------------------------------------------
+2024-07-11 00:02:38: Compset longname is 2010_EAM%CMIP6_ELM%CNPRDCTCBCTOP_MPASSI%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SIAC_SESP
+ ---------------------------------------------------
+2024-07-11 00:02:38: Compset specification file is /glade/work/jnug/E3SM/components/eam//cime_config/config_compsets.xml
+ ---------------------------------------------------
+2024-07-11 00:02:38: Pes     specification file is /glade/work/jnug/E3SM/components/eam/cime_config/config_pes.xml
+ ---------------------------------------------------
+2024-07-11 00:02:38: Forcing is 
+ ---------------------------------------------------
+2024-07-11 00:02:38: Using None coupler instances
+ ---------------------------------------------------
+2024-07-11 00:02:38: Component ATM is EAM with complete set of E3SM atmospheric mods for V3 (80 layers, P3, ZM  with convective microphysics, chemUCI, Linozv3, MAM5 and VBS SOA): CMIP6 forcings:
+ ---------------------------------------------------
+2024-07-11 00:02:38: ATM_GRID is ne30np4.pg2
+ ---------------------------------------------------
+2024-07-11 00:02:38: Component LND is ELM with :CN :C-N-P, nutrient competition via relative demand, ctc soil cascade with black carbon deposition :C-N-P, nutrient competition via relative demand, ctc soil cascade with black carbon deposition and subgrid solar radiation parameterization :
+ ---------------------------------------------------
+2024-07-11 00:02:39: LND_GRID is r05
+ ---------------------------------------------------
+2024-07-11 00:02:39: Component ICE is MPAS seaice:
+ ---------------------------------------------------
+2024-07-11 00:02:39: ICE_GRID is IcoswISC30E3r5
+ ---------------------------------------------------
+2024-07-11 00:02:39: Component OCN is DOCN   prescribed ocean mode
+ ---------------------------------------------------
+2024-07-11 00:02:39: OCN_GRID is IcoswISC30E3r5
+ ---------------------------------------------------
+2024-07-11 00:02:39: Component ROF is MOSART:
+ ---------------------------------------------------
+2024-07-11 00:02:39: ROF_GRID is r05
+ ---------------------------------------------------
+2024-07-11 00:02:39: Component GLC is Stub glacier (land ice) component
+ ---------------------------------------------------
+2024-07-11 00:02:39: GLC_GRID is null
+ ---------------------------------------------------
+2024-07-11 00:02:39: Component WAV is Stub wave component
+ ---------------------------------------------------
+2024-07-11 00:02:39: WAV_GRID is null
+ ---------------------------------------------------
+2024-07-11 00:02:39: Component IAC is Stub iac component
+ ---------------------------------------------------
+2024-07-11 00:02:39: IAC_GRID is null
+ ---------------------------------------------------
+2024-07-11 00:02:39: Component ESP is Stub external system processing (ESP) component
+ ---------------------------------------------------
+2024-07-11 00:02:39: ESP_GRID is None
+ ---------------------------------------------------

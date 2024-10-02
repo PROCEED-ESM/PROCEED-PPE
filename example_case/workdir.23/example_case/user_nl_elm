@@ -1,0 +1,99 @@
+ hist_empty_htapes = .true.
+ 
+ hist_dov2xy = .true.,.true.
+ hist_fincl1 = 'SNOWDP','COL_FIRE_CLOSS','NPOOL','PPOOL','TOTPRODC', 'SNOW_DEPTH', 'QFLX_SNOW_GRND', 'QFLX_EVAP_GRND', 'H2OSNO', 'INT_SNOW'
+ hist_fincl2 = 'H2OSNO', 'FSNO', 'QRUNOFF', 'QSNOMELT', 'FSNO_EFF', 'SNORDSL', 'SNOW', 'FSDS', 'FSR', 'FLDS', 'FIRE', 'FIRA'
+ hist_mfilt = 1,365
+ hist_nhtfrq = 0,-24
+ hist_avgflag_pertape = 'A','A'
+ check_finidat_year_consistency = .false.
+ check_dynpft_consistency = .false.
+ create_crop_landunit = .false.
+ hist_empty_htapes = .true.
+ 
+ hist_dov2xy = .true.,.true.
+ hist_fincl1 = 'SNOWDP','COL_FIRE_CLOSS','NPOOL','PPOOL','TOTPRODC', 'SNOW_DEPTH', 'QFLX_SNOW_GRND', 'QFLX_EVAP_GRND', 'H2OSNO', 'INT_SNOW'
+ hist_fincl2 = 'H2OSNO', 'FSNO', 'QRUNOFF', 'QSNOMELT', 'FSNO_EFF', 'SNORDSL', 'SNOW', 'FSDS', 'FSR', 'FLDS', 'FIRE', 'FIRA'
+ hist_mfilt = 1,365
+ hist_nhtfrq = 0,-24
+ hist_avgflag_pertape = 'A','A'
+ check_finidat_year_consistency = .false.
+ check_dynpft_consistency = .false.
+ create_crop_landunit = .false.
+ hist_empty_htapes = .true.
+ 
+ hist_dov2xy = .true.,.true.
+ hist_fincl1 = 'SNOWDP','COL_FIRE_CLOSS','NPOOL','PPOOL','TOTPRODC', 'SNOW_DEPTH', 'QFLX_SNOW_GRND', 'QFLX_EVAP_GRND', 'H2OSNO', 'INT_SNOW'
+ hist_fincl2 = 'H2OSNO', 'FSNO', 'QRUNOFF', 'QSNOMELT', 'FSNO_EFF', 'SNORDSL', 'SNOW', 'FSDS', 'FSR', 'FLDS', 'FIRE', 'FIRA'
+ hist_mfilt = 1,365
+ hist_nhtfrq = 0,-24
+ hist_avgflag_pertape = 'A','A'
+ check_finidat_year_consistency = .false.
+ check_dynpft_consistency = .false.
+ create_crop_landunit = .false.
+ hist_empty_htapes = .true.
+ 
+ hist_dov2xy = .true.,.true.
+ hist_fincl1 = 'SNOWDP','COL_FIRE_CLOSS','NPOOL','PPOOL','TOTPRODC', 'SNOW_DEPTH', 'QFLX_SNOW_GRND', 'QFLX_EVAP_GRND', 'H2OSNO', 'INT_SNOW'
+ hist_fincl2 = 'H2OSNO', 'FSNO', 'QRUNOFF', 'QSNOMELT', 'FSNO_EFF', 'SNORDSL', 'SNOW', 'FSDS', 'FSR', 'FLDS', 'FIRE', 'FIRA'
+ hist_mfilt = 1,365
+ hist_nhtfrq = 0,-24
+ hist_avgflag_pertape = 'A','A'
+ check_finidat_year_consistency = .false.
+ check_dynpft_consistency = .false.
+ create_crop_landunit = .false.
+ hist_empty_htapes = .true.
+ 
+ hist_dov2xy = .true.,.true.
+ hist_fincl1 = 'SNOWDP','COL_FIRE_CLOSS','NPOOL','PPOOL','TOTPRODC', 'SNOW_DEPTH', 'QFLX_SNOW_GRND', 'QFLX_EVAP_GRND', 'H2OSNO', 'INT_SNOW'
+ hist_fincl2 = 'H2OSNO', 'FSNO', 'QRUNOFF', 'QSNOMELT', 'FSNO_EFF', 'SNORDSL', 'SNOW', 'FSDS', 'FSR', 'FLDS', 'FIRE', 'FIRA'
+ hist_mfilt = 1,365
+ hist_nhtfrq = 0,-24
+ hist_avgflag_pertape = 'A','A'
+ check_finidat_year_consistency = .false.
+ check_dynpft_consistency = .false.
+ create_crop_landunit = .false.
+ hist_empty_htapes = .true.
+ 
+ hist_dov2xy = .true.,.true.
+ hist_fincl1 = 'SNOWDP','COL_FIRE_CLOSS','NPOOL','PPOOL','TOTPRODC', 'SNOW_DEPTH', 'QFLX_SNOW_GRND', 'QFLX_EVAP_GRND', 'H2OSNO', 'INT_SNOW'
+ hist_fincl2 = 'H2OSNO', 'FSNO', 'QRUNOFF', 'QSNOMELT', 'FSNO_EFF', 'SNORDSL', 'SNOW', 'FSDS', 'FSR', 'FLDS', 'FIRE', 'FIRA'
+ hist_mfilt = 1,365
+ hist_nhtfrq = 0,-24
+ hist_avgflag_pertape = 'A','A'
+ check_finidat_year_consistency = .false.
+ check_dynpft_consistency = .false.
+ create_crop_landunit = .false.
+ hist_empty_htapes = .true.
+ 
+ hist_dov2xy = .true.,.true.
+ hist_fincl1 = 'SNOWDP','COL_FIRE_CLOSS','NPOOL','PPOOL','TOTPRODC', 'SNOW_DEPTH', 'QFLX_SNOW_GRND', 'QFLX_EVAP_GRND', 'H2OSNO', 'INT_SNOW'
+ hist_fincl2 = 'H2OSNO', 'FSNO', 'QRUNOFF', 'QSNOMELT', 'FSNO_EFF', 'SNORDSL', 'SNOW', 'FSDS', 'FSR', 'FLDS', 'FIRE', 'FIRA'
+ hist_mfilt = 1,365
+ hist_nhtfrq = 0,-24
+ hist_avgflag_pertape = 'A','A'
+ check_finidat_year_consistency = .false.
+ check_dynpft_consistency = .false.
+ create_crop_landunit = .false.
+ hist_empty_htapes = .true.
+ 
+ hist_dov2xy = .true.,.true.
+ hist_fincl1 = 'SNOWDP','COL_FIRE_CLOSS','NPOOL','PPOOL','TOTPRODC', 'SNOW_DEPTH', 'QFLX_SNOW_GRND', 'QFLX_EVAP_GRND', 'H2OSNO', 'INT_SNOW'
+ hist_fincl2 = 'H2OSNO', 'FSNO', 'QRUNOFF', 'QSNOMELT', 'FSNO_EFF', 'SNORDSL', 'SNOW', 'FSDS', 'FSR', 'FLDS', 'FIRE', 'FIRA'
+ hist_mfilt = 1,30
+ hist_nhtfrq = 0,-24
+ hist_avgflag_pertape = 'A','A'
+ check_finidat_year_consistency = .false.
+ check_dynpft_consistency = .false.
+ create_crop_landunit = .false.
+ hist_empty_htapes = .true.
+ 
+ hist_dov2xy = .true.,.true.
+ hist_fincl1 = 'SNOWDP','COL_FIRE_CLOSS','NPOOL','PPOOL','TOTPRODC', 'SNOW_DEPTH', 'QFLX_SNOW_GRND', 'QFLX_EVAP_GRND', 'H2OSNO', 'INT_SNOW'
+ hist_fincl2 = 'H2OSNO', 'FSNO', 'QRUNOFF', 'QSNOMELT', 'FSNO_EFF', 'SNORDSL', 'SNOW', 'FSDS', 'FSR', 'FLDS', 'FIRE', 'FIRA'
+ hist_mfilt = 1,30
+ hist_nhtfrq = 0,-24
+ hist_avgflag_pertape = 'A','A'
+ check_finidat_year_consistency = .false.
+ check_dynpft_consistency = .false.
+ create_crop_landunit = .false.
