@@ -1,7 +1,7 @@
 # PROCEED-PPE
 Code needed to generate a PPE in the PROCEED framework using E3SMv3. This version supports perturbing any parameters that are on the namelist as well as the hygroscopicity of POM. In the next version, additional non-namelist aerosol properties will also be able to be perturbed. 
 
-This code was partially based off of the example from Yarger et al. (2024), _JAMES_ [1] and uses Dakota software [2] from Sandia National Lab to handle the parameter swapping.
+This code was partially based off of the [repository](https://doi.org/10.5281/zenodo.8284881) [1] from Yarger et al. (2024), _JAMES_ [2] and uses Dakota software [3] from Sandia National Lab to handle the parameter swapping.
 
 ## To use this software to create a PPE:
 ![figure describing the framework for v0 of this code](./images/flowchart_for_v0.png)
@@ -34,6 +34,7 @@ This code was partially based off of the example from Yarger et al. (2024), _JAM
   * Contains an example PPE using the parameter ranges from **example_case_param_ranges.csv**. This example has 3 parameters and 30 ensemble members. The subdirectories **workdir.[1-30]/example_case/** contain the files needed to submit each ensemble member to generate the model run. You can recreate this example by running **create_ppe.sh** again (changing the paths in the first half of **config.txt** as necessary for your machine).
 
 ## References.
-1. Yarger, D., Wagman, B. M., Chowdhary, K., & Shand, L. (2024). Autocalibration of the E3SM version 2 atmosphere model using a PCA-based surrogate for spatial fields. _Journal of Advances in Modeling Earth Systems_, 16, e2023MS003961. https://doi.org/10.1029/2023MS003961.
-2. Adams, B. M., Bohnhoff, W. J., Dalbey, K. R., Ebeida, M. S., Eddy, J. P., Eldred, M. S., . . . Winokur, J. G. (2023, November). _Dakota 6.19.0 documentation_ (Technical Report No. SAND2023-133920). Albuquerque, NM: Sandia National Laboratories. Retrieved from http://snl-dakota.github.io.
+1. AutoCalibration, E. (2023). AutoCalibration (Version 1.0.1) [Computer software]. https://doi.org/10.5281/zenodo.8284881.
+2. Yarger, D., Wagman, B. M., Chowdhary, K., & Shand, L. (2024). Autocalibration of the E3SM version 2 atmosphere model using a PCA-based surrogate for spatial fields. _Journal of Advances in Modeling Earth Systems_, 16, e2023MS003961. https://doi.org/10.1029/2023MS003961.
+3. Adams, B. M., Bohnhoff, W. J., Dalbey, K. R., Ebeida, M. S., Eddy, J. P., Eldred, M. S., . . . Winokur, J. G. (2023, November). _Dakota 6.19.0 documentation_ (Technical Report No. SAND2023-133920). Albuquerque, NM: Sandia National Laboratories. Retrieved from http://snl-dakota.github.io.
 
