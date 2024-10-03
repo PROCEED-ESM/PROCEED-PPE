@@ -1,0 +1,12 @@
+cff-version: 0.1.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Nugent
+    given-names: Jacqueline M.
+    orcid: https://orcid.org/0000-0002-1392-1023
+title: "PROCEED-ESM/PROCEED-PPE: Version 0 (v.0.1.0)"
+version: 0.1.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.13887194
+date-released: 2024-10-03
