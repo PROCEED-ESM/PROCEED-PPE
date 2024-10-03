@@ -3,7 +3,7 @@ Code needed to generate a PPE in the PROCEED framework using E3SMv3. This versio
 
 This code was partially based off of the example from Yarger et al. (2024), _JAMES_ [1] and uses Dakota software [2] from Sandia National Lab to handle the parameter swapping.
 
-### To use this software to create a PPE:
+## To use this software to create a PPE:
 ![figure describing the framework for v0 of this code](./images/flowchart_for_v0.png)
 
 1. **Make a .csv file containing the parameter names and the min and max values** ("example_case_param_ranges.csv" in the example). These parameters will be perturbed using Latin Hypercube sampling within that range.
@@ -11,7 +11,7 @@ This code was partially based off of the example from Yarger et al. (2024), _JAM
 3. Make sure you are in a conda environment with the necessary packages installed (see environment.yml) and **run create_ppe.sh**. This script runs all of the necessary scripts to setup the new case for the PPE, sample the parameters from the provided ranges, swap the namelist parameters using Dakota [2], and swaps the POM hygroscopicity value by making copies of the file controlling its value and passing the new file paths to the `mode_defs` namelist variable. See descriptions in the table of contents below for what each script does.
 4. **Submit the runs!** Note that you will need to change the values of `RESUBMIT` and `CONTINUE_RUN` using `./xml_change` if the original model run you are cloning had a resubmit value greater than zero.
 
-### Contents:
+## Contents:
 * [**setup_steps.sh**](./setup_steps.sh): Makes the necessary subdirectory for the new case, copies the necessary files from **template_files/**, creates symbolic links to the files in **dakota_scripts/**, runs **dakota_scripts/edit_e3sm_in.py** to edit the e3sm.in file for this case, and finally copies the contents of the parent run directory into the case run (a step needed for Dakota to run).
 * [**config.txt**](./config.txt): Controls the file paths and PPE settings (number of parameters and ensemble runs, case name, etc.). This file is read by the other scripts to pass along the information.
 * [**create_ppe.sh**](./create_ppe.sh): Runs all of the scripts needed to create a PPE; see step 3 above.
@@ -33,7 +33,7 @@ This code was partially based off of the example from Yarger et al. (2024), _JAM
 * [**example_case/**](./example_case/):
   * Contains an example PPE using the parameter ranges from **example_case_param_ranges.csv**. This example has 3 parameters and 30 ensemble members. The subdirectories **workdir.[1-30]/example_case/** contain the files needed to submit each ensemble member to generate the model run. You can recreate this example by running **create_ppe.sh** again (changing the paths in the first half of **config.txt** as necessary for your machine).
 
-### References.
+## References.
 1. Yarger, D., Wagman, B. M., Chowdhary, K., & Shand, L. (2024). Autocalibration of the E3SM version 2 atmosphere model using a PCA-based surrogate for spatial fields. _Journal of Advances in Modeling Earth Systems_, 16, e2023MS003961. https://doi.org/10.1029/2023MS003961.
 2. Adams, B. M., Bohnhoff, W. J., Dalbey, K. R., Ebeida, M. S., Eddy, J. P., Eldred, M. S., . . . Winokur, J. G. (2023, November). _Dakota 6.19.0 documentation_ (Technical Report No. SAND2023-133920). Albuquerque, NM: Sandia National Laboratories. Retrieved from http://snl-dakota.github.io.
 
