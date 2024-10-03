@@ -1,5 +1,5 @@
 """
-POM_hygro_to_mode_defs.py
+vals_to_mode_defs.py
 
 Replace sampled hygroscopicity values in the parameter
 value files (.txt plain, .csv annotated) with the full 
