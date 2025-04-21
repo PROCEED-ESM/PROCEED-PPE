@@ -38,6 +38,22 @@ echo ""
 ./swap_mode_defs.sh
 echo ""
 
+echo "============ COPY .CASE.RUN AND CHANGE VALUES ============ "
+echo ""
+echo "(This is necessary because Dakota no longer can copy/clone the .case.run files for some reason, as of April 2025)"
+echo ""
+# loop through work directories, copy default .case.run file, and change the job name and os.chdir line
+for i in $(seq 1 $N_SIMS); do
+    ensn_scripts=$WORKING_PATH/workdir.$i/$NEWCASE
+    def_scripts=$E3SM_OUTPUT_DIR/$PARENT_CASENAME/case_scripts
+    cp $def_scripts/.case.run $ensn_scripts/.
+    new_path=$(printf '%s\n' "$ensn_scripts" | sed 's/[&/\]/\\&/g')
+    old_path=$(printf '%s\n' "$def_scripts" | sed 's/[&/\]/\\&/g')
+    sed -i "s/${old_path}/${new_path}/g" "$ensn_scripts/.case.run"
+    sed -i "s/run.${PARENT_CASENAME}/run.${NEWCASE}.${i}/g" "$ensn_scripts/.case.run"  
+done
+echo ""
+
 echo "============ PPE DONE, READY TO SUBMIT!!!: ============"
 echo ""
 echo "Inside each workdir, run the following commands:"
