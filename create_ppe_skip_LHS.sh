@@ -29,10 +29,17 @@ echo ""
 source config.txt
 cd $NEWCASE/
 
-echo "============ ***SKIPPING*** CREATING SAMPLING FILES: ============"
+echo "============ ***MODIFIED*** CREATING SAMPLING FILES: ============"
 echo ""
 # ./create_sampling_files.sh
-echo ""
+
+# first copy the file over (this isn't in setup_steps.sh)
+if [ ! -f create_template_file.sh ] ; then
+    ln -s ../dakota_scripts/create_template_file.sh create_template_file.sh
+fi
+
+# this creates NEWCASE_inp.yml - Dakota will not swap the param values without it!
+./create_template_file.sh
 
 echo "============ ***SKIPPING*** CONVERTING POM HYGROSCOPICITY VALUES TO MODE_DEFS: ============"
 echo ""
