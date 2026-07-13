@@ -3,7 +3,7 @@
 # PROCEED-PPE
 Code needed to generate a PPE in the PROCEED framework using E3SMv3. This version supports perturbing any parameters that are on the namelist as well as the hygroscopicity of POM. In the next version, additional non-namelist aerosol properties will also be able to be perturbed. 
 
-This code was partially based off of the [repository](https://doi.org/10.5281/zenodo.8284881) [1] from Yarger et al. (2024), _JAMES_ [2] and uses Dakota software [3] from Sandia National Lab to handle the parameter swapping.
+This code was partially based off of the [repository](https://doi.org/10.5281/zenodo.8284881) [1] from Yarger et al. (2024), _JAMES_ [2] and uses Dakota software [3] from Sandia National Lab to handle the parameter swapping. You will need to have Dakota installed on your machine before running this framework (see documentation [here](https://snl-dakota.github.io./docs/latest_release/users/setupdakota.html#installation)).
 
 ## To use this software to create a PPE:
 ### Creating a new PPE
