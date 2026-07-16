@@ -20,7 +20,7 @@ e.g., to get additional outputs for a pre-existing PPE, to run a pre-existing PP
 1. **Rename the parameter range file to have [new casename]_param_ranges.csv.** For example, change "example_case_param_ranges.csv" to "example_case2_param_ranges.csv".
 2. **Edit the file config.txt as needed.** The number of parameters and ensemble members should be the same as in the original PPE, but file paths may differ.
 3. **Run setup_steps.sh**. No modifications are needed here.
-4. Copy all parameter value .csv files and .txt files (those matching \*_parameter_values_\*.csv or \*parameter_values_\*.txt) into the new case directory created in the previous step (e.g., example_case2/) and change their names to match the new case name.
+4. Copy all parameter value .csv files and .txt files (those matching \*\_parameter_values\_\*.csv or \*parameter_values_\*.txt) into the new case directory created in the previous step (e.g., example_case2/) and change their names to match the new case name.
 5. **Run create_ppe_skip_LHS.sh.** This skips over the LHS sampling steps so that the existing parameter values are used instead of resampling to create new ones for each ensemble member.
 6. **Submit the runs as normal.**
 
