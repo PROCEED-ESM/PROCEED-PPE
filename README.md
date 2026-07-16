@@ -16,8 +16,8 @@ Note: you will need to first run a default model simulation.
 4. **Submit the runs!** Note that you will need to change the values of `RESUBMIT` and `CONTINUE_RUN` using `./xml_change` if the original model run you are cloning had a resubmit value greater than zero.
 
 ### Creating a new set of simulations for an existing PPE 
-e.g., to get additional outputs for a pre-existing PPE, running a pre-existing PPE for a different time period, or running a +4K SST experiment for a pre-existing PD PPE. This will preserve the perturbed values in each ensemble member for consistency. Note: you will need a new default run first.
-1. **rename the parameter range file to have [new casename]_param_ranges.csv.** For example, change "example_case_param_ranges.csv" to "example_case2_param_ranges.csv".
+e.g., to get additional outputs for a pre-existing PPE, to run a pre-existing PPE for a different time period, or to run a +4K SST experiment for a pre-existing PD PPE. This will preserve the perturbed values in each ensemble member for consistency. Note: you will need a new default run first.
+1. **Rename the parameter range file to have [new casename]_param_ranges.csv.** For example, change "example_case_param_ranges.csv" to "example_case2_param_ranges.csv".
 2. **Edit the file config.txt as needed.** The number of parameters and ensemble members should be the same as in the original PPE, but file paths may differ.
 3. **Run setup_steps.sh**. No modifications are needed here.
 4. Copy all parameter value .csv files and .txt files (those matching \*_parameter_values_\*.csv or \*parameter_values_\*.txt) into the new case directory created in the previous step (e.g., example_case2/) and change their names to match the new case name.
