@@ -40,9 +40,9 @@ if [ "$RESAMPLE" = false ]; then
 	cat "$inp_template_file"
 	echo ""
 	while true; do
-	    read -p "****BEFORE CONTINUING****: do the file contents shown above list ALL namelist parameters to be perturbed (i.e., excluding parameters with values stored in mode_defs or similar)?" yn
+	    read -p "****BEFORE CONTINUING****: Double check - do the file contents shown above list ALL namelist parameters to be perturbed (i.e., excluding parameters with values stored in mode_defs or similar)? " yn
 	    case $yn in
-		    [Yy]* ) echo ""; break;;
+		    [Yy]* ) echo "Great - you are all set to continue."; break;;
 		    [Nn]* ) echo "Uh oh, something went wrong! Check that your "$NEWCASE"_param_ranges.csv does actually list all of your parameters and that the sampled parameter files copied from the PPE you're rerunning have all the parameters. If so, you may need to manually edit "$inp_template_file" to include all parameters. PROCEED WITH CAUTION IF SO - check the final user_nl_eam files in each work directory to make sure the parameters were perturbed before running!! ---> **** EXITING NOW ****"; exit 1;;
 		    * ) echo "Please answer yes or no";;
 	    esac

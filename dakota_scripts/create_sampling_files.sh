@@ -55,9 +55,9 @@ if [ "$RESAMPLE" = false ]; then
 	cat "$inp_template_file"
 	echo ""
 	while true; do
-	    read -p "****BEFORE CONTINUING****: Double check - do the file contents shown above list ALL namelist parameters to be perturbed (i.e., excluding parameters with values stored in mode_defs or similar)?" yn
+	    read -p "****BEFORE CONTINUING****: Double check - do the file contents shown above list ALL namelist parameters to be perturbed (i.e., excluding parameters with values stored in mode_defs or similar)? " yn
 	    case $yn in
-		[Yy]* ) echo ""; break;;
+		[Yy]* ) echo "Great - you are all set to continue."; break;;
 		[Nn]* ) echo "Uh oh, something went wrong! Check that your "$NEWCASE"_param_ranges.csv does actually list all of your parameters and try again. ---> **** EXITING NOW ****"; exit 1;;
 		* ) echo "Please answer yes or no";;
 	    esac
