@@ -5,6 +5,7 @@ set -e
 echo ""
 echo "============ SETTING UP NEW CASE: ============"
 echo ""
+# will exit if you haven't completed the pre-steps
 ./setup_steps.sh || exit 1
 echo ""
 
@@ -14,7 +15,8 @@ cd $NEWCASE/
 
 echo "============ CREATING SAMPLING FILES: ============"
 echo ""
-./create_sampling_files.sh
+# will exit if something went wrong with the template file (bc then Dakota will not swap all intended namelist parameters!)
+./create_sampling_files.sh || exit 1
 echo ""
 
 echo "============ CONVERTING POM HYGROSCOPICITY VALUES TO MODE_DEFS: ============"

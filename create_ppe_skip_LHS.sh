@@ -39,7 +39,8 @@ if [ ! -f create_template_file.sh ] ; then
 fi
 
 # this creates NEWCASE_inp.yml - Dakota will not swap the param values without it!
-./create_template_file.sh
+# will exit if something went wrong with the template file (bc then Dakota will not swap all intended namelist parameters!)
+./create_template_file.sh || exit 1
 
 echo "============ ***SKIPPING*** CONVERTING POM HYGROSCOPICITY VALUES TO MODE_DEFS: ============"
 echo ""

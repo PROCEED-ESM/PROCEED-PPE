@@ -41,7 +41,7 @@ if [ "$RESAMPLE" = false ]; then
     fi
     {
         read
-        while IFS=, read -r param min max; do
+        while IFS=, read -r param min max || [[ -n "$param" ]]; do
            printf $param"\t = {{"$param"}}\n"
         done
     } < $param_ranges_csv >> $inp_template_file
@@ -50,6 +50,17 @@ if [ "$RESAMPLE" = false ]; then
     sed -i '/POM_hygroscopicity_param/d' $inp_template_file
     
     if [ -f $inp_template_file ]; then
-        echo "Parameter swap template file saved to "$inp_template_file"."
+        echo "Parameter swap template file saved to "$inp_template_file". Contents of this file are:"
+	echo ""
+	cat "$inp_template_file"
+	echo ""
+	while true; do
+	    read -p "****BEFORE CONTINUING****: Double check - do the file contents shown above list ALL namelist parameters to be perturbed (i.e., excluding parameters with values stored in mode_defs or similar)?" yn
+	    case $yn in
+		[Yy]* ) echo ""; break;;
+		[Nn]* ) echo "Uh oh, something went wrong! Check that your "$NEWCASE"_param_ranges.csv does actually list all of your parameters and try again. ---> **** EXITING NOW ****"; exit 1;;
+		* ) echo "Please answer yes or no";;
+	    esac
+	done
     fi
 fi
